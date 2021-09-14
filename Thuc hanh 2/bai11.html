@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let tongdoanhthu = prompt("Nhập tổng doanh thu 1 tháng");
+    let phuthuoc = prompt ("Nhập số người phụ thuộc");
+    let baohiem = prompt("Nhập tỉ lệ % đóng bảo hiểm");
+    let giamtrukhac = prompt("Nhập các loại giảm trừ khác (không có thì điền 0)")
+    chiuthue = tongdoanhthu - 11000000 - phuthuoc * 4500000 - tongdoanhthu * baohiem / 100 - giamtrukhac;
+    muc1 = 0.05; // Đến 5tr
+    muc2 = 0.1; // Đến 10tr
+    muc3 = 0.15; // Đến 18tr
+    muc4 = 0.2; // Đến 32tr
+    muc5 = 0.25; // Đến 52tr
+    muc6 = 0.3; // Đến 80tr
+    muc7 = 0.35; // Trên 80tr
+    if (chiuthue <= 0) {
+        alert("Người này không phải đóng thuế TNCN")
+    }
+    else {
+        if (chiuthue > 80000000) {
+            thue = 5000000 * muc1 + 5000000 * muc2 + 8000000 * muc3 + 14000000 * muc4 + 20000000 * muc5 + 28000000 * muc6 + (chiuthue - 80000000) * muc7;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+        else if (chiuthue > 52000000) {
+            thue = 5000000 * muc1 + 5000000 * muc2 + 8000000 * muc3 + 14000000 * muc4 + 20000000 * muc5 + (chiuthue - 52000000) * muc6;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+        else if (chiuthue > 32000000) {
+            thue = 5000000 * muc1 + 5000000 * muc2 + 8000000 * muc3 + 14000000 * muc4 + (chiuthue - 32000000) * muc5;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+        else if (chiuthue > 18000000) {
+            thue = 5000000 * muc1 + 5000000 * muc2 + 8000000 * muc3 + (chiuthue - 18000000) * muc4;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+        else if (chiuthue > 10000000) {
+            thue = 5000000 * muc1 + 5000000 * muc2 + (chiuthue - 10000000) * muc3;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+        else if (chiuthue > 5000000) {
+            thue = 5000000 * muc1 + (chiuthue - 5000000) * muc2;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+        else {
+            thue = chiuthue * muc1;
+            alert("Thuế TNCN phải đóng là " + thue + " đồng.")
+        }
+    }
+
+
+</script>

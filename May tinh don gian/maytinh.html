@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            text-align: center;
+            width: 50px;
+            height: 30px;
+        }
+        .cangiua {
+            width: 40px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+<table style="text-align: center">
+    <tr>
+        <td colspan="4"><input type="text" id="scr" style="width: 200px; height: 25px"> </td>
+    </tr>
+    <tr>
+        <td> <button class="cangiua" onclick="addTxt ('1')"> 1 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('2')"> 2 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('3')"> 3 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('+')"> + </button> </td>
+    </tr>
+    <tr>
+        <td> <button class="cangiua" onclick="addTxt ('4')"> 4 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('5')"> 5 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('6')"> 6 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('-')"> - </button> </td>
+    </tr>
+    <tr>
+        <td> <button class="cangiua" onclick="addTxt ('7')"> 7 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('8')"> 8 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('9')"> 9 </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('*')"> x </button> </td>
+    </tr>
+    <tr>
+        <td> <button class="cangiua" onclick="resetScr ()"> AC </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('0')"> 0 </button> </td>
+        <td> <button class="cangiua" onclick="cal ('=')"> = </button> </td>
+        <td> <button class="cangiua" onclick="addTxt ('/')"> / </button> </td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function addTxt(txt) {
+        document.getElementById("scr").value += txt;
+    }
+    function resetScr() {
+        document.getElementById("scr").value = ("");
+    }
+    function cal() {
+        let result = document.getElementById('scr').value;
+        document.getElementById("scr").value = eval(result);
+    }
+</script>

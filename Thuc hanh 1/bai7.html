@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let sodien = prompt("Nhập số điện");
+    bac1 = 1678; // 1 đến 50
+    bac2 = 1734; // 51 đến 100
+    bac3 = 2014; // 101 đến 200
+    bac4 = 2536; // 201 đến 300
+    bac5 = 2834; // 301 đến 400
+    bac6 = 2927; // 401 trở lên
+    if (sodien > 400) {
+        tienDien = 50 * bac1 + 50 * bac2 + 100 * bac3 + 100 * bac4 + 100 * bac5 + (sodien - 400) * bac6;
+    }
+    else if (sodien > 300) {
+        tienDien = 50 * bac1 + 50 * bac2 + 100 * bac3 + 100 * bac4 + (sodien - 300) * bac5;
+    }
+    else if (sodien > 200) {
+        tienDien = 50 * bac1 + 50 * bac2 + 100 * bac3 + (sodien - 200) * bac4;
+    }
+    else if (sodien > 100) {
+        tienDien = 50 * bac1 + 50 * bac2 + (sodien - 100) * bac3;
+    }
+    else if (sodien > 50) {
+        tienDien = 50 * bac1 + (sodien - 50) * bac2;
+    }
+    else {
+        tienDien = 50 * bac1
+    }
+    alert("Số tiền phải đóng là " + tienDien + " đồng.")
+</script>

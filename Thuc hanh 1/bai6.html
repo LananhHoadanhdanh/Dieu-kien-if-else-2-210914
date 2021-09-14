@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let dThu = prompt("Nhập doanh thu vào đây:")
+    if (dThu > 0 && dThu <= 100000) {
+        hoahong = dThu * 0.02;
+    }
+    else if (dThu <= 200000) {
+        hoahong = dThu * 0.05;
+    }
+    else if (dThu <= 500000) {
+        hoahong = dThu * 0.09;
+    }
+    else {
+        hoahong = dThu * 0.15;
+    }
+    alert("Số tiền hoa hồng tương ứng là " + hoahong + " đồng.")
+
+</script>

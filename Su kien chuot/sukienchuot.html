@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành: Sự kiện chuột</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<img id="myImage" src="https://lh3.googleusercontent.com/proxy/LIhPRbx3Jj14Lwe4ZdzMPLKDwpibW_hqCUMupWbtW_x8_gJU9FQJJtu61yLSd1LXUliUDK15guQVLwYVHZLdFiNOHPw2RH4mqwvPu76MsBLmTQKo" alt="blank">
+<h3>Click button below to move the image to right</h3>
+<button onclick="moveRight()">Click me</button>
+</body>
+</html>
+<script>
+    let imgObj = document.getElementById('myImage');
+    function init() {
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+    window.onload = init;
+</script>

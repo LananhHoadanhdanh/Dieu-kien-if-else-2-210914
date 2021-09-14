@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let diem = prompt("Nhập vào số điểm");
+    if ((diem > 100) || (diem < 0)) {
+        alert("Lỗi!");
+    }
+    else {
+        if (diem >= 85) {
+            alert(diem + " điểm thuộc loại giỏi");
+        }
+        else if (diem >= 70) {
+            alert(diem + " điểm thuộc loại khá");
+        }
+        else if (diem >= 50) {
+            alert(diem + " điểm thuộc loại trung bình");
+        }
+        else if (diem >= 30) {
+            alert(diem + " điểm thuộc loại yếu");
+        }
+        else {
+            alert(diem + " điểm thuộc loại kém");
+        }
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành: Sự kiện bàn phím</title>
+</head>
+<body onload="docReady()">
+<img id="nobita" style="position:absolute;left:0; top:0;" src="https://upload.wikimedia.org/wikipedia/vi/thumb/2/2c/Nobita.png/240px-Nobita.png" alt="blank">
+</body>
+</html>
+<script>
+    function lentren() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
+    };
+    function xuongduoi() {
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+    };
+    function sangtrai() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + "px";
+    };
+    function sangphai() {
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + "px";
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                sangtrai();
+                break;
+            case 39:
+                sangphai();
+                break;
+            case 38:
+                lentren();
+                break;
+            case 40:
+                xuongduoi();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection)
+    }
+</script>
