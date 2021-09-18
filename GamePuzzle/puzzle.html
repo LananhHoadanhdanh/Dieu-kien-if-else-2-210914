@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img onclick="changeImage(this.id)" id="img1" src="images/anh3.jpg" alt="3" width="50%"> <br>
+<img onclick="changeImage(this.id)" id="img2" src="images/anh5.jpg" alt="5" width="50%"> <br>
+<img onclick="changeImage(this.id)" id="img3" src="images/anh1.jpg" alt="1" width="50%"> <br>
+<img onclick="changeImage(this.id)" id="img4" src="images/anh3.jpg" alt="3" width="50%"> <br>
+<img onclick="changeImage(this.id)" id="img5" src="images/anh4.jpg" alt="4" width="50%">
+</body>
+</html>
+
+<script>
+    function changeImage(id) {
+        let img = document.getElementById(id);
+        let number = parseInt(img.alt);
+        number < 5 ? number++ : number = 1;
+        img.alt = number;
+        img.src = "images/anh" + img.alt + ".jpg";
+        checkWin ();
+    }
+    function checkWin() {
+        let img1 = document.getElementById('img1').alt;
+        let img2 = document.getElementById('img2').alt;
+        let img3 = document.getElementById('img3').alt;
+        let img4 = document.getElementById('img4').alt;
+        let img5 = document.getElementById('img5').alt;
+        if (img1 == 1 && img2 == 2 && img3 == 3 && img4 == 4 && img5 == 5) {
+            setTimeout (function(){
+                alert("おめでとうございます！");
+            }, 500);
+        }
+    }
+</script>
